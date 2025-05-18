@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    width: 250px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+  }
+  
+  .link-label {
+    font-weight: bold;
+  }
+  
+  .copy-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .copy-btn:hover {
+    background-color: #0056b3;
+  }
+  
