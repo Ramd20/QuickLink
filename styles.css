@@ -37,3 +37,10 @@ body {
     background-color: #0056b3;
   }
   
+  .copy-msg {
+  margin-left: 8px;
+  font-size: 0.85em;
+  color: green;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
