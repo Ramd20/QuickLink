@@ -44,21 +44,31 @@ function renderLinks(links) {
     copyBtn.textContent = "Copy";
     copyBtn.addEventListener("click", () => {
       navigator.clipboard.writeText(link.url).then(() => {
-    const msg = document.createElement("span");
-    msg.textContent = "Copied!";
-    msg.className = "copy-msg";
-    copyBtn.after(msg);
+        const msg = document.createElement("span");
+        msg.textContent = "Copied!";
+        msg.className = "copy-msg";
+        copyBtn.after(msg);
+        setTimeout(() => {
+          msg.style.opacity = "0";
+          setTimeout(() => msg.remove(), 300);
+        }, 1200);
+      });
+    });
 
-  setTimeout(() => {
-  msg.style.opacity = "0";
-  setTimeout(() => msg.remove(), 300);
-}, 1200);
-})
-        .catch(err => console.error("Copy failed", err));
+    const deleteBtn = document.createElement("button");
+    deleteBtn.className = "delete-btn";
+    deleteBtn.textContent = "Delete";
+    deleteBtn.title = "Delete this link";
+    deleteBtn.addEventListener("click", () => {
+      links.splice(index, 1); // remove link from array
+      chrome.storage.local.set({ quickLinks: links }, () => {
+        renderLinks(links); // re-render after deletion
+      });
     });
 
     item.appendChild(label);
     item.appendChild(copyBtn);
+    item.appendChild(deleteBtn);
     container.appendChild(item);
   });
 }

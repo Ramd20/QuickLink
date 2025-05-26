@@ -1,46 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 10px;
-    width: 250px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  .link-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    padding: 6px 8px;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-  }
-  
-  .link-label {
-    font-weight: bold;
-  }
-  
-  .copy-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 4px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .copy-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .copy-msg {
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding: 6px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.link-label {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.copy-btn,
+.delete-btn {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.copy-msg {
   margin-left: 8px;
   font-size: 0.85em;
   color: green;
-  opacity: 0.8;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
